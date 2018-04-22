@@ -237,128 +237,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/22/？？？/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wufw">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/blog-logo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Data Sharing">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/22/？？？/" itemprop="url">Test</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-22T15:20:00+08:00">
-                2018-04-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>\documentclass[11pt]{article}<br>\usepackage{CJK}<br>\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}<br>\usepackage{algorithm}<br>\usepackage{algorithmicx}<br>\usepackage{algpseudocode}<br>\usepackage{amsmath}</p>
-<p>\floatname{algorithm}{算法}<br>\renewcommand{\algorithmicrequire}{\textbf{输入:}}<br>\renewcommand{\algorithmicensure}{\textbf{输出:}}</p>
-<p>\begin{document}<br>\begin{CJK<em>}{UTF8}{gkai}<br>    \begin{algorithm}<br>        \caption{用归并排序求逆序数}<br>        \begin{algorithmic}[1] %每行显示行号<br>            \Require $Array$数组，$n$数组大小<br>            \Ensure 逆序数<br>            \Function {MergerSort}{$Array, left, right$}<br>                \State $result \gets 0$<br>                \If {$left &lt; right$}<br>                    \State $middle \gets (left + right) / 2$<br>                    \State $result \gets result +$ \Call{MergerSort}{$Array, left, middle$}<br>                    \State $result \gets result +$ \Call{MergerSort}{$Array, middle, right$}<br>                    \State $result \gets result +$ \Call{Merger}{$Array,left,middle,right$}<br>                \EndIf<br>                \State \Return{$result$}<br>            \EndFunction<br>            \State<br>            \Function{Merger}{$Array, left, middle, right$}<br>                \State $i\gets left$<br>                \State $j\gets middle$<br>                \State $k\gets 0$<br>                \State $result \gets 0$<br>                \While{$i&lt;middle$ \textbf{and} $j&lt;right$}<br>                    \If{$Array[i]&lt;Array[j]$}<br>                        \State $B[k++]\gets Array[i++]$<br>                    \Else<br>                        \State $B[k++] \gets Array[j++]$<br>                        \State $result \gets result + (middle - i)$<br>                    \EndIf<br>                \EndWhile<br>                \While{$i&lt;middle$}<br>                    \State $B[k++] \gets Array[i++]$<br>                \EndWhile<br>                \While{$j&lt;right$}<br>                    \State $B[k++] \gets Array[j++]$<br>                \EndWhile<br>                \For{$i = 0 \to k-1$}<br>                    \State $Array[left + i] \gets B[i]$<br>                \EndFor<br>                \State \Return{$result$}<br>            \EndFunction<br>        \end{algorithmic}<br>    \end{algorithm}<br>\end{CJK</em>}<br>\end{document}</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/21/Hello World/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -521,7 +399,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
