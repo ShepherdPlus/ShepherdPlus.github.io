@@ -7,7 +7,7 @@
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="???," />
+  <meta name="keywords" content="蓄水池问题," />
 
 
 
@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta name="keywords" content="???">
+<meta name="description" content="数据流介绍数据流：以规定顺序被读取一次的数据序列。 特性：数据到达快速、数据范围广泛、数据到达时间持续。 蓄水池抽样算法（Reservoir Sampling Algorithm）蓄水池问题解析问题：如何从数据流中选出数据放入蓄水池中，并保证每个数据被抽中的概率相等。 参数：令 $R$ 代表蓄水池，$|R|$ 为蓄水池能存储的数据的个数。 解析： 蓄水池抽样算法的核心是保证每一个数据被抽中的概率相">
+<meta name="keywords" content="蓄水池问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2018/04/20/hello-world/index.html">
+<meta property="og:title" content="数据流随机抽样问题（一）">
+<meta property="og:url" content="http://yoursite.com/2018/04/27/Samping From Streaming Data/index.html">
 <meta property="og:site_name" content="Data Sharing">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="数据流介绍数据流：以规定顺序被读取一次的数据序列。 特性：数据到达快速、数据范围广泛、数据到达时间持续。 蓄水池抽样算法（Reservoir Sampling Algorithm）蓄水池问题解析问题：如何从数据流中选出数据放入蓄水池中，并保证每个数据被抽中的概率相等。 参数：令 $R$ 代表蓄水池，$|R|$ 为蓄水池能存储的数据的个数。 解析： 蓄水池抽样算法的核心是保证每一个数据被抽中的概率相">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-20T15:57:08.650Z">
+<meta property="og:image" content="http://yoursite.com/2018/04/27/image/sampling%20data%20from%20stream/algorithm1.png">
+<meta property="og:updated_time" content="2018-04-27T09:51:23.082Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="数据流随机抽样问题（一）">
+<meta name="twitter:description" content="数据流介绍数据流：以规定顺序被读取一次的数据序列。 特性：数据到达快速、数据范围广泛、数据到达时间持续。 蓄水池抽样算法（Reservoir Sampling Algorithm）蓄水池问题解析问题：如何从数据流中选出数据放入蓄水池中，并保证每个数据被抽中的概率相等。 参数：令 $R$ 代表蓄水池，$|R|$ 为蓄水池能存储的数据的个数。 解析： 蓄水池抽样算法的核心是保证每一个数据被抽中的概率相">
+<meta name="twitter:image" content="http://yoursite.com/2018/04/27/image/sampling%20data%20from%20stream/algorithm1.png">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/20/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/27/Samping From Streaming Data/"/>
 
 
 
 
 
-  <title>Hello World | Data Sharing</title>
+  <title>数据流随机抽样问题（一） | Data Sharing</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -145,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-right page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -243,7 +245,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/20/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/27/Samping From Streaming Data/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wufw">
@@ -260,7 +262,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">数据流随机抽样问题（一）</h1>
         
 
         <div class="post-meta">
@@ -272,8 +274,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-20T20:40:57+08:00">
-                2018-04-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-27T17:51:00+08:00">
+                2018-04-27
               </time>
             
 
@@ -310,15 +312,29 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h2 id="数据流介绍"><a href="#数据流介绍" class="headerlink" title="数据流介绍"></a>数据流介绍</h2><p><strong>数据流</strong>：以规定顺序被读取一次的数据序列。</p>
+<p><strong>特性</strong>：数据到达快速、数据范围广泛、数据到达时间持续。</p>
+<h2 id="蓄水池抽样算法（Reservoir-Sampling-Algorithm）"><a href="#蓄水池抽样算法（Reservoir-Sampling-Algorithm）" class="headerlink" title="蓄水池抽样算法（Reservoir Sampling Algorithm）"></a>蓄水池抽样算法（Reservoir Sampling Algorithm）</h2><h3 id="蓄水池问题解析"><a href="#蓄水池问题解析" class="headerlink" title="蓄水池问题解析"></a>蓄水池问题解析</h3><p><strong>问题</strong>：如何从数据流中选出数据放入蓄水池中，并保证每个数据被抽中的概率相等。</p>
+<p><strong>参数</strong>：令 $R$ 代表蓄水池，$|R|$ 为蓄水池能存储的数据的个数。</p>
+<p><strong>解析</strong>： 蓄水池抽样算法的核心是保证每一个数据被抽中的概率相等，当蓄水池还没被填满的时候，那么只要数据到达蓄水池时，就往蓄水池里添加数据，此时每个数据被选中的概率为 $1$。如果蓄水池已经被填满了，那么当第 $n(n&gt;R)$ 个数据到达，只需要保证每个数据被抽中的概率为 $\displaystyle\frac{|R|}{n}$ 即可。</p>
+<h3 id="蓄水池抽样算法简介"><a href="#蓄水池抽样算法简介" class="headerlink" title="蓄水池抽样算法简介"></a>蓄水池抽样算法简介</h3><h4 id="伪代码"><a href="#伪代码" class="headerlink" title="伪代码"></a>伪代码</h4><p><img src="../image/sampling data from stream/algorithm1.png" width="60%" height="60%"></p>
+<h4 id="算法解析"><a href="#算法解析" class="headerlink" title="算法解析"></a>算法解析</h4><ol>
+<li>前 $|R|$ 个数据直接加入蓄水池中；</li>
+<li>从第 $|R|+1$ 个数据开始，当第 $i$ 的数据 $r$ 到达蓄水池时，有 $\displaystyle\frac{|R|}{i}$ 的概率进行步骤3；</li>
+<li>从蓄水池中随机移除一个数据，将 $r$ 加入蓄水池中。</li>
+</ol>
+<h4 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h4><p>最终需要证明的结论是每个数据被选中进入蓄水池的概率相同，则题目可以转换为：</p>
+<p>设 $i$ 为第 $i$ 个到达的数据，当 $i\le|R|$ 时，前 $i$ 个数据被选中的概率均为 $1$，满足要求。</p>
+<p>当 $i&gt;|R|$ 时，用数学归纳法证明每个数据被选中的概率为 $\displaystyle\frac{|R|}{i}$，证明如下：</p>
+<p>设 $i=k&gt;|R|$ 时，假设这 $k$ 个数据被选中的概率均为 $\displaystyle\frac{|R|}{k}$。则当 $i=k+1$ 时，第 $k+1$ 个数据被选中进入蓄水池的概率由<strong>算法解析</strong>的步骤2可得，其概率为 $\displaystyle\frac{|R|}{k+1}$。对于前 $k$ 个数据，每个数据被选入蓄水池的概率为 $\displaystyle\frac{|R|}{k}$，当第 $k+1$ 个数据进入时，由<strong>算法解析</strong>的步骤2可得，有 $\displaystyle\frac{|R|}{k+1}$ 的概率使蓄水池发生改变，有 $\displaystyle\frac{k+1-|R|}{k+1}$ 的概率使蓄水池不发生改变。对这两种情况进行分析：</p>
+<ol>
+<li>如果发生改变，每个蓄水池中的数据有 $\displaystyle\frac{1}{|R|}$ 的概率被替换，那么留在蓄水池中的数据的概率为 $\displaystyle\frac{|R|-1}{|R|}$；</li>
+<li>如果没发生改变，则蓄水池中的数据肯定不会被替换出去。</li>
+</ol>
+<p>综合前面的分析，前 $k$ 个数据被留在蓄水池的概率 $P$ 为：</p>
+<p>\begin{align}<br>P<br>&amp; =\frac{|R|}{k}\times\lgroup\frac{|R|}{k+1}\times\frac{|R|-1}{|R|}+\frac{k+1-|R|}{k+1}\times1\rgroup \\<br>&amp; =\frac{|R|}{k}\times\frac{k}{k+1} \\<br>&amp; =\frac{|R|}{k+1}<br>\end{align}</p>
+<p>可得第 $k+1$ 个数据到达时通过蓄水池算法后所有数据被蓄水池选中的概率为 $\displaystyle\frac{|R|}{k+1}$。</p>
+<p>由数学归纳法得，命题得证。</p>
 
       
     </div>
@@ -336,7 +352,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/" rel="tag"># ???</a>
+            <a href="/tags/蓄水池问题/" rel="tag"># 蓄水池问题</a>
           
         </div>
       
@@ -349,15 +365,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/04/21/Hello World/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/21/Hello World/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -484,7 +500,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据流介绍"><span class="nav-number">1.</span> <span class="nav-text">数据流介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#蓄水池抽样算法（Reservoir-Sampling-Algorithm）"><span class="nav-number">2.</span> <span class="nav-text">蓄水池抽样算法（Reservoir Sampling Algorithm）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#蓄水池问题解析"><span class="nav-number">2.1.</span> <span class="nav-text">蓄水池问题解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#蓄水池抽样算法简介"><span class="nav-number">2.2.</span> <span class="nav-text">蓄水池抽样算法简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#伪代码"><span class="nav-number">2.2.1.</span> <span class="nav-text">伪代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法解析"><span class="nav-number">2.2.2.</span> <span class="nav-text">算法解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#证明"><span class="nav-number">2.2.3.</span> <span class="nav-text">证明</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -514,12 +530,8 @@
 </div>
 
 
-  <span class="post-meta-divider">|</span>
-
-
-
   <div class="theme-info">
-    'The real strength of human beings is self change.'
+    The real strength of human beings is self change.
   </div>
 
 
@@ -689,6 +701,45 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="custom_mathjax_source">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+
 
   
 
