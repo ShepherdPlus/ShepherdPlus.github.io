@@ -204,6 +204,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -279,6 +289,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/蓄水池问题/" itemprop="url" rel="index">
+                    <span itemprop="name">蓄水池问题</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -313,7 +345,7 @@
 <h2 id="蓄水池抽样算法（Reservoir-Sampling-Algorithm）"><a href="#蓄水池抽样算法（Reservoir-Sampling-Algorithm）" class="headerlink" title="蓄水池抽样算法（Reservoir Sampling Algorithm）"></a>蓄水池抽样算法（Reservoir Sampling Algorithm）</h2><h3 id="蓄水池问题解析"><a href="#蓄水池问题解析" class="headerlink" title="蓄水池问题解析"></a>蓄水池问题解析</h3><p><strong>问题</strong>：如何从数据流中选出数据放入蓄水池中，并保证每个数据被抽中的概率相等。</p>
 <p><strong>参数</strong>：令 $R$ 代表蓄水池，$|R|$ 为蓄水池能存储的数据的个数。</p>
 <p><strong>解析</strong>： 蓄水池抽样算法的核心是保证每一个数据被抽中的概率相等，当蓄水池还没被填满的时候，那么只要数据到达蓄水池时，就往蓄水池里添加数据，此时每个数据被选中的概率为 $1$。如果蓄水池已经被填满了，那么当第 $n(n&gt;R)$ 个数据到达，只需要保证每个数据被抽中的概率为 $\displaystyle\frac{|R|}{n}$ 即可。</p>
-<h3 id="蓄水池抽样算法简介"><a href="#蓄水池抽样算法简介" class="headerlink" title="蓄水池抽样算法简介"></a>蓄水池抽样算法简介</h3><h4 id="伪代码"><a href="#伪代码" class="headerlink" title="伪代码"></a>伪代码</h4><p><img src="../image/sampling data from stream/algorithm1.png" width="60%" height="60%"></p>
+<h3 id="蓄水池抽样算法简介"><a href="#蓄水池抽样算法简介" class="headerlink" title="蓄水池抽样算法简介"></a>蓄水池抽样算法简介</h3><h4 id="伪代码"><a href="#伪代码" class="headerlink" title="伪代码"></a>伪代码</h4><p><img src="/2018/04/27/Samping From Streaming Data/algorithm1.png" width="60%" height="60%"></p>
 <h4 id="算法解析"><a href="#算法解析" class="headerlink" title="算法解析"></a>算法解析</h4><ol>
 <li>前 $|R|$ 个数据直接加入蓄水池中；</li>
 <li>从第 $|R|+1$ 个数据开始，当第 $i$ 的数据 $r$ 到达蓄水池时，有 $\displaystyle\frac{|R|}{i}$ 的概率进行步骤3；</li>
@@ -548,13 +580,22 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
             
               
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
